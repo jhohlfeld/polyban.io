@@ -348,6 +348,14 @@ module.exports = function(grunt) {
             '{,*/}*.html',
             'styles/fonts/{,*/}*.*'
           ]
+        },{
+          expand: true,
+          dot: true,
+          cwd: 'bower_components/semantic-ui/dist/',
+          dest: '<%= config.dist %>/styles/',
+          src: [
+            'themes/default/assets/fonts/{,*/}*.*'
+          ]
         }]
       },
       vulcanize: {
