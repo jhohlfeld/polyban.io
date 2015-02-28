@@ -17,6 +17,19 @@ h1,h2,h3,h4,h5 {
 	font-weight: 400;
 }
 
+.ui.button {
+	font-family: 'Roboto', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-weight: 300;
+}
+
+.ui.dropdown .menu > .item {
+	font-weight: 300;
+}
+
+.ui.dropdown .menu .active.item {
+	font-weight: 400;
+}
+
 header {
 	position: fixed;
 	top: 0;
@@ -41,7 +54,7 @@ header {
 		font-size: 1.5em;
 		margin: .5em 1em;
 
-		> * {
+		> .full a {
 			margin-right: 1em;
 
 			&:last-child {
@@ -51,6 +64,10 @@ header {
 
 		a {
 			color: inherit;
+		}
+
+		.ui.dropdown.button .menu .item {
+			font-size: 1.5em;
 		}
 	}
 }
