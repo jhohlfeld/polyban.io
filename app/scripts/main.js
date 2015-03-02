@@ -1,9 +1,6 @@
 (function() {
   'use strict';
 
-  // jshint devel:true
-  console.log('\'Allo \'Allo!');
-
   var Router = Backbone.Router.extend({
     routes: {
       ':section': 'navigate'

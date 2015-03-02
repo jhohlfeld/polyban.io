@@ -192,8 +192,7 @@ module.exports = function(grunt) {
     wiredep: {
       app: {
         ignorePath: /^\/|\.\.\//,
-        src: ['<%= config.app %>/index.html'],
-        exclude: ['bower_components/polymer/polymer.js']
+        src: ['<%= config.app %>/index.html']
       }
     },
 
@@ -282,32 +281,6 @@ module.exports = function(grunt) {
     },
 
 
-    vulcanize: {
-      dist: {
-        options: {
-          csp: true,
-          strip: true
-        },
-        files: {
-          '.tmp/wc_vulcanized.html': '.tmp/index.html'
-        },
-      },
-    },
-
-    dom_munger: {
-      dist: {
-        options: {
-          update: {
-            selector: 'script[src="bower_components/polymer/polymer.js"]',
-            attribute: 'src',
-            value: 'polymer.js'
-          }
-        },
-        src: '<%= config.dist %>/index.html'
-      }
-    },
-
-
     // By default, your `index.html`'s <!-- Usemin block --> will take care
     // of minification. These next options are pre-configured if you do not
     // wish to use the Usemin blocks.
@@ -356,29 +329,6 @@ module.exports = function(grunt) {
           src: [
             'themes/default/assets/fonts/{,*/}*.*'
           ]
-        }]
-      },
-      vulcanize: {
-        files: [{
-          expand: true,
-          dot: true,
-          dest: '.tmp/',
-          src: 'bower_components/**'
-        }, {
-          dest: '.tmp/index.html',
-          src: '<%= config.dist %>/index.html'
-        }]
-      },
-      'vulcanize-after': {
-        files: [{
-          dest: '<%= config.dist %>/index.html',
-          src: '.tmp/wc_vulcanized.html'
-        }, {
-          dest: '<%= config.dist %>/wc_vulcanized.js',
-          src: '.tmp/wc_vulcanized.js'
-        }, {
-          dest: '<%= config.dist %>/polymer.js',
-          src: '.tmp/bower_components/polymer/polymer.js'
         }]
       }
     },
@@ -450,11 +400,7 @@ module.exports = function(grunt) {
     'copy:dist',
     'rev',
     'usemin',
-    'htmlmin',
-    'copy:vulcanize',
-    'vulcanize',
-    'copy:vulcanize-after',
-    'dom_munger:dist'
+    'htmlmin'
   ]);
 
   grunt.registerTask('default', [

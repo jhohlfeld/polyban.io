@@ -2,9 +2,9 @@
 @import "semantic-ui/src/themes/default/globals/site.variables";
 @import "import/variables";
 @import "import/breakpoints";
+@import "import/layout";
 
 html, body {
-	height: 100%;
 }
 
 body {
@@ -43,10 +43,10 @@ header {
 	}
 
 	.logo {
-		overflow: hidden;
+		height: 100%;
 
 		img {
-			width: 12em;
+			height: 100%;
 		}
 	}
 
@@ -127,15 +127,4 @@ main {
 
 footer {
 	padding: 1em;
-
-	.ui.list {
-
-		.item {
-
-			.header {
-			}
-			a {
-			}
-		}
-	}
 }
