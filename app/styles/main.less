@@ -81,6 +81,11 @@ main {
 		text-align: center;
 		margin: 2em 0;
 
+		> p {
+			font-size: 1.5em;
+
+		}
+
 		&#one {
 			p {
 				font-size: 1.5em;
@@ -88,15 +93,7 @@ main {
 			}
 		}
 
-		h1,h2 {
-			 &~ p {
-				font-size: 1.5em;
-
-			}
-		}
-
 		&#two {
-			/*min-height: 12%;*/
 		}
 
 		&#three {
@@ -109,6 +106,15 @@ main {
 			.motto {
 				font-style: italic;
 				font-weight: 400;
+				text-align: right;
+
+				max-width: 17em;
+				margin: 1em auto;
+
+				small {
+					margin-right: 1em;
+					font-size: .65em;
+				}
 			}
 		}
 
