@@ -3,7 +3,10 @@
 
   // set up other ui elements
 
+  // setup contact form (modal)
+
   var contactForm = $('.ui.modal.form');
+  contactForm.valid = false;
   contactForm.modal();
   contactForm.form({
     email: {
@@ -28,14 +31,33 @@
       }]
     }
   }, {
-    on: 'submit'
+    on: 'submit',
+    onSuccess: function() {
+      contactForm.valid = true;
+      contactForm.modal('hide');
+    }
   });
+
+  contactForm.on('submit', function(e) {
+    if (!contactForm.valid) {
+      e.preventDefault();
+    }
+  });
+
+  contactForm.modal('setting', {
+    onApprove: function() {
+      return false;
+    }
+  });
+
 
   // register contact form buttons
 
-  $('.contact').on('click', function(e) {
+  $('.contact').on('click', function() {
     contactForm.modal('show');
   });
+
+  // register action form (the small form within the site)
 
   var actionForm = $('.ui.action.input');
   actionForm.form({
@@ -48,7 +70,7 @@
     }
   }, {
     on: 'submit',
-    onSuccess: function(e) {
+    onSuccess: function() {
       contactForm.form('clear').form('set value', 'EMAIL', actionForm.form('get value', 'email')).modal('show');
     }
   });
@@ -59,7 +81,7 @@
 
   // email obfuscator
 
-  function unCryptMailto(s) {
+  var unCryptMailto = window.unCryptMailto = function(s) {
     var n = 0;
     var r = '';
     for (var i = 0; i < s.length; i++) {
@@ -70,11 +92,11 @@
       r += String.fromCharCode(n - 1);
     }
     return r;
-  }
+  };
 
-  function linkToUnCryptMailto(s) {
+  window.linkToUnCryptMailto = function(s) {
     location.href = unCryptMailto(s);
-  }
+  };
 
   // set up routing
 
