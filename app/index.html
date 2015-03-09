@@ -82,7 +82,7 @@
               </ul>
             </div>
           </div>
-          <a class="ui bottom attached big positive button" href="">Contact us</a>
+          <a href="#/contact" class="ui bottom attached big positive button contact">Contact us</a>
         </div>
 
         <div class="card">
@@ -151,12 +151,12 @@
 
       <p>Our ultimate goal is to create long lasting partnerships, find new markets, create spin-offs and invent new products for the b2b and b2c markets.</p>
 
-      <div class="ui huge action input">
-        <input type="text" value="" placeholder="Your email address">
-        <button class="ui positive big right labeled icon button">
+      <form class="ui huge action input">
+        <input type="text" name="email" placeholder="Your email address">
+        <button class="ui positive big right labeled icon submit button">
           <i class="mail icon"></i><span class="text">Please contact us!</span>
         </button>
-      </div>
+      </form>
 
     </section>
 
@@ -221,32 +221,58 @@
     <div class="ui stackable inverted divided relaxed centered grid">
 
       <div class="four wide column">
-        <div class="ui yellow inverted header">About</div>
+        <div class="ui yellow inverted header">Impressum</div>
         <div class="ui inverted link list">
-          <a class="item" href="#/imprint">Imprint</a>
-          <a class="item" href="#/disclaimer">Disclaimer</a>
+          <p>Verantworlicher nach & 5 TMG:</p>
+          <p>Jakob Hohlfeld
+            <br>℅ Coworking Schiller40
+            <br> Schillerstraße 40
+            <br> 38440 Wolfsburg, Germany
+            <br> <a class="ui link yellow" href="javascript:linkToUnCryptMailto('nbjmup;ifmmpAqpmzcbo/jp');">hello [at] polyban [dot] io</a>
+          </p>
         </div>
       </div>
 
-      <div class="four wide column">
-        <div class="ui yellow inverted header">Resources</div>
-        <div class="ui inverted link list">
-          <a class="item" href="#/">Submit a project</a>
-          <a class="item" href="#/">Apply for a job</a>
-        </div>
-      </div>
-
-      <div class="six wide column">
-        <div class="ui yellow inverted header">Contact</div>
-        <p>
-          POLYBAN Jakob Hohlfeld
-          <br> ℅ Coworking Schiller40, Schillerstraße 40
-          <br> 38440 Wolfsburg, Germany
+      <div class="eight wide column">
+        <div class="ui yellow inverted header">Polyban.io Web Consulting</div>
+        <p>Polyban.io is your partner for developing new ways of interaction with your users. We build the team with the right expertise needed for your job. And we don't stop there: we also plan your project and help you implement it with our strategic partners.</p>
+        <p><a href="#/contact" class="contact">Please contact us so we can learn more about your needs!</a>
         </p>
       </div>
     </div>
 
   </footer>
+
+  <form class="ui form modal" action="//polyban.us8.list-manage.com/subscribe/post?u=0de4737f80fdc9686eb8c57ff&amp;id=db4d3c22a8" method="post" target="blank">
+    <div class="header">
+      Get in touch with Polyban.io
+    </div>
+    <div class="content">
+
+      <p>Please allow us to contact you, so we can learn how we may assist you!</p>
+
+      <div class="field">
+        <label>Email address</label>
+        <input type="email" placeholder="Email address" name="EMAIL" />
+      </div>
+      <div class="field">
+        <label>First name</label>
+        <input type="text" placeholder="First name" name="FIRSTNAME" />
+      </div>
+      <div class="field">
+        <label>Last name</label>
+        <input type="text" placeholder="Last name" name="LASTNAME" />
+      </div>
+
+    </div>
+    <div class="actions ui ">
+      <button class="ui button negative right labeled icon">
+        <i class="cancel icon"></i> Cancel
+      </button>
+      <button type="submit" name="subscribe" class="ui button positive right labeled icon">
+        <i class="mail icon"></i> Add me to your list</button>
+    </div>
+  </form>
 
   <script>
   (function(i, s, o, g, r, a, m) {
