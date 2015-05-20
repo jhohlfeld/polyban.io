@@ -1,4 +1,4 @@
-(function() {
+(function(analytics) {
   'use strict';
 
   // set up other ui elements
@@ -55,6 +55,7 @@
 
   $('.contact').on('click', function() {
     contactForm.modal('show');
+    analytics.track('');
   });
 
   // register action form (the small form within the site)
@@ -120,4 +121,15 @@
   Backbone.history.start();
 
   $('.ui.dropdown').dropdown();
-})();
+
+  //add tracking
+
+  $('#contact').on('click', function() {
+    analytics.track('Clicked button "contact"');
+  });
+
+  $('#apply').on('click', function() {
+    analytics.track('Clicked button "apply"');
+  });
+
+})(window.analytics);

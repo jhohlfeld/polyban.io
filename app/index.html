@@ -26,7 +26,7 @@
   <header class="horizontal layout justified">
 
     <div class="logo">
-      <img src="images/logo-polyban320x132.png" alt="Logo of polyban.io web consulting" />
+      <img src="images/logo-polyban-name-245.png" alt="Logo of polyban.io web consulting" />
     </div>
 
     <nav class="self-end">
@@ -82,7 +82,7 @@
               </ul>
             </div>
           </div>
-          <a href="#/contact" class="ui bottom attached big positive button contact">Contact us</a>
+          <a id="contact" href="#/contact" class="ui bottom attached big positive button contact">Contact us</a>
         </div>
 
         <div class="card">
@@ -98,7 +98,7 @@
               </ul>
             </div>
           </div>
-          <a class="ui bottom attached big positive button" href="http://goo.gl/forms/FKVxrf7npJ" target="blank">Apply as candidate</a>
+          <a id="apply" class="ui bottom attached big positive button" href="http://goo.gl/forms/FKVxrf7npJ" target="blank">Apply as candidate</a>
         </div>
 
       </div>
@@ -184,37 +184,6 @@
 
     </section>
 
-    <section id="five">
-
-      <h2>Our team</h2>
-
-      <div class="ui massive horizontal list">
-        <div class="item">
-          <img class="ui avatar image" src="/images/team/jakob.jpg" alt="Jakob Hohlfeld, CEO and entrepreneur" />
-          <div class="content">
-            <div class="header">Jakob Hohlfeld</div>
-            CEO and entrepreneur
-          </div>
-        </div>
-
-        <div class="item">
-          <img class="ui avatar image" src="/images/team/marvin.jpg" alt="Marvin Neuman, associate and advisor sales and business development" />
-          <div class="content">
-            <div class="header">Marvin Neumann</div>
-            Associate and advisor sales and business development
-          </div>
-        </div>
-
-        <div class="item">
-          <img class="ui avatar image" src="/images/team/prabhu.jpg" alt="Prabhu Shankar Ramachandran, associate and advisor finance and staff" />
-          <div class="content">
-            <div class="header">Prabhu Shankar Ramachandran</div>
-            Associate and advisor finance and staff
-          </div>
-        </div>
-      </div>
-
-    </section>
   </main>
 
   <footer class="ui inverted black footer vertical segment">
@@ -274,20 +243,11 @@
     </div>
   </form>
 
-  <script>
-  (function(i, s, o, g, r, a, m) {
-    i['GoogleAnalyticsObject'] = r;
-    i[r] = i[r] || function() {
-      (i[r].q = i[r].q || []).push(arguments)
-    }, i[r].l = 1 * new Date();
-    a = s.createElement(o),
-      m = s.getElementsByTagName(o)[0];
-    a.async = 1;
-    a.src = g;
-    m.parentNode.insertBefore(a, m)
-  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-  ga('create', 'UA-60273283-1', 'auto');
-  ga('send', 'pageview');
+  <script type="text/javascript">
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.0.1";
+  analytics.load("wJtXX4FbitUdzGbqP3Gsh2jqYgEJdSS9");
+  analytics.page()
+  }}();
   </script>
 
   <!-- build:js(.) scripts/vendor.js -->
