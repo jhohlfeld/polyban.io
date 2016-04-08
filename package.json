@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "browser-sync": "browser-sync start --no-open --files  \"build/*.css, build/*.html, build/*.js\" --server build",
+    "browser-sync": "browser-sync start --no-open --files  \"build/*.css, build/images/*, build/*.html, build/*.js\" --server build",
     "build:html": "jade --out build/ src/*.jade",
     "build:css": "pleeease-watch",
-    "dev": "npm-run-all -p \"build:html -- --watch\" build:css browser-sync"
+    "copy:img": "cpx \"src/**/*.{svg,png,jpg}\" build",
+    "dev": "npm-run-all -p \"build:html -- --watch\" build:css \"copy:img -- --watch\" browser-sync"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "devDependencies": {
     "browser-sync": "^2.11.2",
     "browserify": "^13.0.0",
+    "cpx": "^1.3.1",
     "jade": "^1.11.0",
     "less": "^2.6.1",
     "npm-run-all": "^1.7.0",
