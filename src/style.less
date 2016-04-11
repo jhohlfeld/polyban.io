@@ -26,17 +26,12 @@ header {
 
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 2em 2em;
 
-    #logo {
-
+    img[src*=logo] {
         height: 83px;
-        margin: .5em 0;
-
-        img {
-            height: 100%;
-        }
-
+        margin: .5em 2em .5em 3%;
     }
 
     section#right {
@@ -46,10 +41,11 @@ header {
         width: 50%;
         max-width: 40em;
 
-        #avatar img {
+        img[src*=avatar] {
 
             width: 104px;
             height: 104px;
+            flex-shrink: 0;
             padding: 2px;
             border: 1px solid #979797;
             border-radius: 50%;
@@ -109,7 +105,6 @@ main {
 
         align-self: center;
         margin: 3em 0;
-        // box-shadow: 1px 1px 4px 0px rgba(0,0,0,.3);
         border: 2px solid white;
         border-radius: .5em;
         background: transparent;

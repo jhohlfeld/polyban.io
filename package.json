@@ -10,7 +10,7 @@
     "build:css": "pleeease-watch",
     "copy:img": "cpx \"src/**/*.{svg,png,jpg}\" build",
     "build": "npm-run-all build:html copy:img && pleeease-compile",
-    "dev": "npm-run-all -p \"build:html -- --watch\" \"build:css -- --watch\" \"copy:img -- --watch\" browser-sync"
+    "dev": "npm-run-all -p \"build:html -- --watch\" build:css \"copy:img -- --watch\" browser-sync"
   },
   "repository": {
     "type": "git",
