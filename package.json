@@ -9,7 +9,8 @@
     "build:html": "jade --out build/ src/*.jade",
     "build:css": "pleeease-watch",
     "copy:img": "cpx \"src/**/*.{svg,png,jpg}\" build",
-    "dev": "npm-run-all -p \"build:html -- --watch\" build:css \"copy:img -- --watch\" browser-sync"
+    "build": "npm-run-all build:html copy:img && pleeease-compile",
+    "dev": "npm-run-all -p \"build:html -- --watch\" \"build:css -- --watch\" \"copy:img -- --watch\" browser-sync"
   },
   "repository": {
     "type": "git",
