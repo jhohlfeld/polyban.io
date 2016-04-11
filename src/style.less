@@ -28,18 +28,8 @@ header {
     justify-content: space-between;
     padding: 2em 2em;
 
-    section#right {
-
-        display: flex;
-        min-width: 26em;
-        width: 50%;
-        max-width: 40em;
-
-    }
-
     #logo {
 
-        // width: 226px;
         height: 83px;
         margin: .5em 0;
 
@@ -49,19 +39,27 @@ header {
 
     }
 
-    img[src*=avatar] {
+    section#right {
 
-        width: 104px;
-        height: 104px;
-        border: 1px solid #979797;
-        border-radius: 50%;
-        padding: 2px;
-        display: inline-block;
+        display: flex;
+        min-width: 26em;
+        width: 50%;
+        max-width: 40em;
 
-    }
+        #avatar img {
 
-    #info {
-        margin-left: 1em;
+            width: 104px;
+            height: 104px;
+            padding: 2px;
+            border: 1px solid #979797;
+            border-radius: 50%;
+
+        }
+
+        #info {
+            margin-left: 1em;
+        }
+
     }
 
     .text {
@@ -136,6 +134,11 @@ footer {
         margin: 1em 3%;
     }
 
+    h2 {
+        font-size: 1em;
+        margin: 0;
+    }
+
 }
 
 .checkout {
@@ -153,6 +156,8 @@ display: inline-block;
     white-space: nowrap;
     box-sizing: border-box;
     text-align: center;
+
+    text-decoration: none;
 
     &:hover {
         background-color: #509819;
